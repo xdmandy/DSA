@@ -1,6 +1,6 @@
 ## DSA in cpp
-![](./cheat-sheet.jpg)
+![](./docs/cheat-sheet.jpg)
 
 ---
 
-![](./chars.png)
+![](./docs/chars.png)
