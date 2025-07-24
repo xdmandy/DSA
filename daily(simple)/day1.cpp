@@ -49,7 +49,7 @@ int main() {
         cin >> arr[i];
     }
    
-    // Call the function to reverse the array
+    // function call
     reverseArray(arr, n);
 
     for (int i = 0; i < n; i++) {
