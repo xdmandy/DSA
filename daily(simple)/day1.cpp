@@ -58,3 +58,67 @@ int main() {
 
     return 0;
 }
+
+
+///////////////////////
+// Second Question
+///////////////////////
+/*
+Sum of Digits - II
+Write a program to calculate the sum of the digits present in an alphanumeric string.
+
+Input Format
+The first line contains an integer, T, denoting the number of test cases.
+Each of the next T lines contains a string consisting of lowercase/uppercase English letters, along with digits 0 to 9. (There shall be no space in the string)
+Output Format
+For each test case, print the sum of digits in each string.
+Constraints
+1 ≤ T ≤ 20
+1 ≤ Length of each string ≤ 1000
+Sample 1:
+Input
+1
+Hel#284!lo23Chef
+Output
+19
+*/
+
+//solution
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool isNum(char ch){
+    if(ch>='0' && ch<='9'){
+        return true;
+        
+    }else{
+        return false;
+    }
+        
+}
+
+
+int main() {
+    // Write your code here
+    int t;
+    cin >> t;
+    while(t--){
+        string str;
+        cin >> str;
+        
+        int sum=0;
+        
+        for(char ch : str){
+            if(isNum(ch)){
+                sum += (ch -'0');  
+            }else{
+                continue;
+            }
+        }
+        
+    cout << sum << endl;
+        
+    }
+    return 0;
+}
