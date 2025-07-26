@@ -220,3 +220,61 @@ int main() {
 	else cout<<"NO";
 
 }
+
+/*
+Find maximum in an Array
+Given a list of 
+N
+N integers, representing height of mountains. Find the height of the tallest mountain.
+
+Input:
+First line will contain 
+T
+T, number of testcases. Then the testcases follow.
+The first line in each testcase contains one integer, 
+N
+N.
+The following line contains 
+N
+N space separated integers: the height of each mountains.
+Output:
+For each testcase, output one line with one integer: the height of the tallest mountain for that test case.
+
+Constraints:
+1≤T≤10
+1≤N≤100000
+0≤ height of each mountain ≤10^9
+ 
+Sample 1:
+Input
+1
+5
+4 7 6 3 1
+Output
+7
+*/
+
+//solution
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int t;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        int arr[n];
+        for(int i=0;i<n;i++){
+            cin >> arr[i];
+        }
+        int max=0;
+        for(int h : arr){
+            if(h>max) max=h;
+        }
+        
+        cout << max << endl;
+        
+    }
+}
