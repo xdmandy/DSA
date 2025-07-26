@@ -144,3 +144,79 @@ int main() {
     if(count1>count2) cout << count1;
     else cout << count2;
 }
+
+
+/*
+Search an element in an array
+You are given an array 
+A
+A of size 
+N
+N and an element 
+X
+X. Your task is to find whether the array 
+A
+A contains the element 
+X
+X or not.
+
+Input Format
+The first line contains two space-separated integers 
+N
+N and 
+X
+X — the size of array and the element to be searched.
+The second line contains all the elements of array 
+A
+A
+Output Format
+Output "YES" if the element 
+X
+X is present in 
+A
+A, otherwise output "NO".
+
+Constraints
+1≤N≤10^5
+1≤X≤10^5
+1≤Ai≤10^5
+
+Sample 1:
+Input
+5 3
+7 3 5 2 1
+Output
+YES
+
+Sample 2:
+Input
+5 10
+7 3 5 2 1
+Output
+NO
+*/
+
+//solution
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int n;
+	cin >> n;
+	int arr[n];
+	int x;
+	cin >> x;
+	
+	for(int i=0;i<n;i++){
+	    cin >> arr[i];
+	}
+	bool num=false;
+	for(int nums:arr){
+	    if(nums == x ) num=true;
+	    
+	}
+	if(num) cout<<"YES";
+	else cout<<"NO";
+
+}
