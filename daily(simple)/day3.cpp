@@ -76,3 +76,71 @@ int main() {
     isArmstrongNumber(n);
     return 0;
 }
+
+
+/*
+Problem 2
+
+Chef loves research! Now he is looking for subarray of maximal length with non-zero product.
+
+Chef has an array A with N elements: A1, A2, ..., AN.
+
+Subarray Aij of array A is elements from index i to index j: Ai, Ai+1, ..., Aj.
+
+Product of subarray Aij is product of all its elements (from ith to jth).
+
+Input
+First line contains sinlge integer N denoting the number of elements.
+Second line contains N space-separated integers A1, A2, ..., AN denoting the elements of array.
+ 
+
+Output
+In a single line print single integer - the maximal length of subarray with non-zero product.
+ 
+
+Constraints
+1 ≤ N ≤ 100000
+0 ≤ Ai ≤ 10000
+ 
+
+Sample 1:
+Input
+6
+1 0 2 3 0 4
+Output
+2
+Explanation:
+For the first sample subarray is: {2, 3}.
+*/
+
+//Solution
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int n;
+    cin >> n;
+    int arr[n];
+    
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+    
+    int count1=0;
+    int count2=0;
+    int temp;
+    
+    for(int num:arr){
+        if(num !=0){
+            count1++;
+        }else if(num == 0){
+            temp = count1;
+             if(temp>count2) count2=temp;
+             count1 = 0;
+             
+        }
+    }
+    if(count1>count2) cout << count1;
+    else cout << count2;
+}
