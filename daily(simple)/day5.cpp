@@ -90,8 +90,6 @@ COUPON
 NO COUPON
 */
 
-![image](./images/day5.png)
-
 
 //solution
 
